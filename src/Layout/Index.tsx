@@ -6,12 +6,19 @@ import MainHeader from '../MainHeader/Index'
 import Aside from '../Components/Aside/Index';
 import Content from '../Content/Index';
 
-const Layout: React.FC = () => {
+
+interface ChildrenProps {
+	children: React.ReactNode;
+}
+
+const Layout: React.FC<ChildrenProps> = ({ children }) => {
     return (
         <Grid>
              <MainHeader />
              <Aside />
-             <Content />
+             <Content>
+                { children }
+            </Content>
         </Grid>
     );
 }
