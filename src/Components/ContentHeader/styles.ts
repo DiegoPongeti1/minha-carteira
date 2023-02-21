@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import { isInterfaceDeclaration } from "typescript";
+
+interface ITitlecontainerProps{
+    lineColor: String;
+}
 
 export const Container = styled.div`
     width: 100%;
@@ -11,7 +16,7 @@ export const Container = styled.div`
 
 `;
 
-export const TitleContainer = styled.div`
+export const TitleContainer = styled.div<ITitlecontainerProps>`
         > h1 { 
             color: ${props => props.theme.colors.white};
 
@@ -19,11 +24,11 @@ export const TitleContainer = styled.div`
             content:  '';
             display: block;
             width: 55px;
-            border-bottom: 10px solid ${props => props.theme.colors.warning};
+            border-bottom: 10px solid ${props => props.lineColor};
             }
         }
 `;
 
 export const Controllers = styled.div`
-        
+        display: flex;
 `;
