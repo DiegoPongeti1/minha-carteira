@@ -24,11 +24,11 @@ export const TitleContainer = styled.div<ITitlecontainerProps>`
             content:  '';
             display: block;
             width: 55px;
-            border-bottom: 10px solid ${props => props.lineColor};
+            
             }
         }
 `;
-
+//border-bottom: 10px solid ${props => props.lineColor};
 export const Controllers = styled.div`
         display: flex;
 `;
